@@ -25,6 +25,7 @@ trait Arrow[=>:[_, _]] extends Split[=>:] with Strong[=>:] with Category[=>:] { 
   final def <<<[A, B, C](fbc: (B =>: C), fab: (A =>: B)): =>:[A, C] =
     compose(fbc, fab)
 
+  // some comment
   /** Flipped `<<<`. */
   def >>>[A, B, C](fab: (A =>: B), fbc: (B =>: C)): (A =>: C) =
     compose(fbc, fab)
